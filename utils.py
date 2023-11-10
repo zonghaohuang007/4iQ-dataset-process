@@ -84,8 +84,8 @@ def read_files(breach_compilation_folder):
                         data_dir[user_name][email] = []
                     data_dir[user_name][email].append(password)
         num = num + 1
-        if num % 200 == 0:
-            # print('finished {} files'.format(num))
+        if num % 20 == 0:
+            print('finished {} files'.format(num))
             delete_keys = []
             for i in data_dir.keys():
                 if (len(data_dir[i].keys()) < 2 and len(data_dir[i][list(data_dir[i].keys())[0]]) < 2) or len(data_dir[i]) > 100:
